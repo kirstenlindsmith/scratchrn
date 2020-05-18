@@ -43,6 +43,52 @@ export const styles = StyleSheet.create({
   },
 });
 
+export const gameStyles = StyleSheet.create({
+  mainContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignContent: 'center',
+  },
+  gestureContainer: {
+    backgroundColor: '#c9a693',
+    height: 370,
+    width: 355,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 80,
+    marginHorizontal: 30,
+    // borderColor: 'blue',
+    // borderWidth: 1,
+  },
+  boardRow: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    // borderColor: 'green',
+    // borderWidth: 1,
+  },
+  boardTile: {
+    color: 'white',
+    height: 35,
+    width: 35,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign: 'center',
+    textAlignVertical: 'center',
+    // borderColor: 'red',
+    // borderWidth: 1,
+  },
+  invisibleSquare: {
+    color: 'transparent',
+    opacity: 0,
+  },
+});
+
 export const topBarOptions = (page: any) => ({
   topBar: {
     title: {
