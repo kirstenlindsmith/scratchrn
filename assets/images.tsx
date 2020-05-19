@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image } from 'react-native';
 
-const imageStyle = { width: 35, height: 35 };
+const imageStyle = { width: 30, height: 30 };
 
 export const ManDown = (
   <Image style={imageStyle} source={require('./manDown.png')} />
