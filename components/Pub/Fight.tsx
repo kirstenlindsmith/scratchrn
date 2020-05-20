@@ -126,17 +126,17 @@ const Fight = (props: any) => {
     if (won) {
       Navigation.push(props.componentId, {
         component: {
-          name: 'FightWon',
+          name: 'fightwon',
         },
       });
     } else if (lost) {
       Navigation.push(props.componentId, {
         component: {
-          name: 'GameOver',
+          name: 'gameover',
         },
       });
     }
-  }, [won, lost]);
+  }, [won, lost, props.componentId]);
 
   const onSwipe = (gestureName: any) => {
     switch (gestureName) {
@@ -249,11 +249,10 @@ const Fight = (props: any) => {
   };
 
   const renderTiles = (i: number, j: number) => {
-    // if (mobX === X && mobY === Y) {
-    //   moveMob();
-    //   return currentMan;
-    // } else
-    if (Y === i && X === j) {
+    if (mobX === X && mobY === Y) {
+      moveMob();
+      return currentMan;
+    } else if (Y === i && X === j) {
       return currentMan;
     } else if (mobY === i && mobX === j) {
       return currentMob;
@@ -270,7 +269,7 @@ const Fight = (props: any) => {
       onSwipeLeft={() => onSwipe(SWIPE_LEFT)}
       onSwipeRight={() => onSwipe(SWIPE_RIGHT)}
       config={gestureConfig}>
-      <StatusBar barStyle="light-content" />
+      <StatusBar barStyle="dark-content" />
       <SafeAreaView>
         <View style={styles.healthBar}>
           <Text style={styles.healthText}>YOU</Text>

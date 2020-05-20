@@ -14,7 +14,7 @@ import {
 
 import { Navigation } from 'react-native-navigation';
 
-import { gameStyles, styles, topBarOptions } from '../shared/styles';
+import { gameStyles, styles, topBarOptions } from '../../shared/styles';
 
 const GameOver = (props: any) => {
   const computedStyles = gameStyles();
@@ -37,7 +37,7 @@ const GameOver = (props: any) => {
                 onPress={() =>
                   Navigation.push(props.componentId, {
                     component: {
-                      name: 'Home',
+                      name: 'home',
                     },
                   })
                 }

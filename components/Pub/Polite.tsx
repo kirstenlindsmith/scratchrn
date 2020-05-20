@@ -48,7 +48,7 @@ const Polite = (props: any) => {
                   onPress={() =>
                     Navigation.push(props.componentId, {
                       component: {
-                        name: 'Aggressive',
+                        name: 'aggressive',
                       },
                     })
                   }
@@ -62,7 +62,7 @@ const Polite = (props: any) => {
                   onPress={() =>
                     Navigation.push(props.componentId, {
                       component: {
-                        name: 'Drink',
+                        name: 'drink',
                       },
                     })
                   }

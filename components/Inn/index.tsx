@@ -42,13 +42,13 @@ const Inn = (props: any) => {
                   title="ASK FOR FOOD"
                   color="#c46868"
                   accessibilityLabel="Ask for food"
-                  onPress={() =>
+                  onPress={() => {
                     Navigation.push(props.componentId, {
                       component: {
-                        name: 'Food',
+                        name: 'food',
                       },
-                    })
-                  }
+                    });
+                  }}
                 />
               </View>
               <View style={styles.button}>
@@ -59,7 +59,7 @@ const Inn = (props: any) => {
                   onPress={() =>
                     Navigation.push(props.componentId, {
                       component: {
-                        name: 'Room',
+                        name: 'room',
                       },
                     })
                   }

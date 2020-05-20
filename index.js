@@ -5,24 +5,26 @@
 import { Navigation } from 'react-native-navigation';
 import App from './App';
 
-import GameOver from './components/GameOver';
+import {
+  GameOver,
+  Inn,
+  Food,
+  Room,
+  Pub,
+  Aggressive,
+  Polite,
+  Fight,
+} from './components';
 
-import Inn from './components/Inn';
-import Food from './components/Inn/Food';
-
-import Pub from './components/Pub';
-import Aggressive from './components/Pub/Aggressive';
-import Polite from './components/Pub/Polite';
-import Fight from './components/Pub/Fight';
-
-Navigation.registerComponent('Home', () => App);
-Navigation.registerComponent('Inn', () => Inn);
-Navigation.registerComponent('Food', () => Food);
-Navigation.registerComponent('Pub', () => Pub);
-Navigation.registerComponent('Aggressive', () => Aggressive);
-Navigation.registerComponent('Polite', () => Polite);
-Navigation.registerComponent('Fight', () => Fight);
-Navigation.registerComponent('GameOver', () => GameOver);
+Navigation.registerComponent('home', () => App);
+Navigation.registerComponent('inn', () => Inn);
+Navigation.registerComponent('food', () => Food);
+Navigation.registerComponent('room', () => Room);
+Navigation.registerComponent('pub', () => Pub);
+Navigation.registerComponent('aggressive', () => Aggressive);
+Navigation.registerComponent('polite', () => Polite);
+Navigation.registerComponent('fight', () => Fight);
+Navigation.registerComponent('gameover', () => GameOver);
 
 Navigation.events().registerAppLaunchedListener(() => {
   Navigation.setRoot({
@@ -31,7 +33,7 @@ Navigation.events().registerAppLaunchedListener(() => {
         children: [
           {
             component: {
-              name: 'Home',
+              name: 'home',
             },
           },
         ],

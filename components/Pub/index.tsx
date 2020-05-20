@@ -46,7 +46,7 @@ const Pub = (props: any) => {
                   onPress={() =>
                     Navigation.push(props.componentId, {
                       component: {
-                        name: 'Aggressive',
+                        name: 'aggressive',
                       },
                     })
                   }
@@ -60,7 +60,7 @@ const Pub = (props: any) => {
                   onPress={() =>
                     Navigation.push(props.componentId, {
                       component: {
-                        name: 'Polite',
+                        name: 'polite',
                       },
                     })
                   }

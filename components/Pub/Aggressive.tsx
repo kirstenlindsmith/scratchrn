@@ -57,7 +57,7 @@ const Aggressive = (props: any) => {
                   onPress={() =>
                     Navigation.push(props.componentId, {
                       component: {
-                        name: 'Fight',
+                        name: 'fight',
                       },
                     })
                   }
@@ -71,7 +71,7 @@ const Aggressive = (props: any) => {
                   onPress={() =>
                     Navigation.push(props.componentId, {
                       component: {
-                        name: 'Kicked out',
+                        name: 'kickedout',
                       },
                     })
                   }

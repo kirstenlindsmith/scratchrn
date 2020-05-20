@@ -10,10 +10,11 @@ import {
   Text,
   StatusBar,
   Button,
+  Linking,
 } from 'react-native';
 
 import { Navigation } from 'react-native-navigation';
-
+import Link from '../Shared/Link';
 import { styles, topBarOptions } from '../../shared/styles';
 
 const Food = (props: any) => {
@@ -45,24 +46,30 @@ const Food = (props: any) => {
                   onPress={() =>
                     Navigation.push(props.componentId, {
                       component: {
-                        name: 'Patrons',
+                        name: 'patrons',
                       },
                     })
                   }
                 />
               </View>
               <View style={styles.button}>
-                <Button
-                  title="EXAMINE THE OBJECTS IN THE ROOM"
-                  color="#c46868"
-                  accessibilityLabel="Examine the objects in the room"
-                  onPress={() =>
-                    Navigation.push(props.componentId, {
-                      component: {
-                        name: 'CommonRoom',
-                      },
-                    })
+                <Link
+                  url={
+                    'https://gamepedia.cursecdn.com/wowpedia/thumb/5/57/Lion%27s_Pride_Inn_interior.jpg/1200px-Lion%27s_Pride_Inn_interior.jpg'
                   }
+                  color="#c46868"
+                  accessibilityLabel="Examine the objects in the room">
+                  EXAMINE THE OBJECTS IN THE ROOM
+                </Link>
+              </View>
+              <View style={styles.button}>
+                <Button
+                  title="EXAMINE THE FOURTH WALL"
+                  color="#c46868"
+                  accessibilityLabel="Open settings"
+                  onPress={React.useCallback(async () => {
+                    await Linking.openSettings();
+                  }, [])}
                 />
               </View>
             </View>
