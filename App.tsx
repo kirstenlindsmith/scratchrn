@@ -20,7 +20,7 @@ import {
 
 import { Navigation } from 'react-native-navigation';
 import DeepLinkRouter from './components/Shared/DeepLinkRouter';
-
+//NOTE: https://reactnative.dev/docs/linking
 import { styles, topBarOptions } from './shared/styles';
 
 const App = (props: any) => {
