@@ -19,7 +19,7 @@ const DeepLinkRouter = ({
   const destination = initialUrl?.slice(initialUrl.indexOf('/page') + 6);
   if (
     destination &&
-    VIEWS.some((page) => page === destination?.toLocaleLowerCase())
+    VIEWS.some((page) => page === destination?.toLowerCase())
   ) {
     Navigation.push(componentId, {
       component: {

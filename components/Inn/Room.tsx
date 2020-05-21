@@ -16,7 +16,7 @@ import {
 
 import { styles, topBarOptions } from '../../shared/styles';
 
-const Room = (props: any) => {
+const Room = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />

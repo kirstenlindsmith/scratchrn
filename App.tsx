@@ -8,6 +8,8 @@
  * @format
  */
 
+//NOTE: https://reactnative.dev/docs/linkingcd
+import 'react-native-gesture-handler';
 import React from 'react';
 import {
   SafeAreaView,
@@ -20,15 +22,17 @@ import {
 
 import { Navigation } from 'react-native-navigation';
 import DeepLinkRouter from './components/Shared/DeepLinkRouter';
-//NOTE: https://reactnative.dev/docs/linking
 import { styles, topBarOptions } from './shared/styles';
+
+import Drawer from './components/Shared/Drawer';
 
 const App = (props: any) => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        <ScrollView
+        <Drawer />
+        {/* <ScrollView
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
           <DeepLinkRouter showLink componentId={props.componentId}>
@@ -73,7 +77,7 @@ const App = (props: any) => {
               </View>
             </View>
           </DeepLinkRouter>
-        </ScrollView>
+        </ScrollView> */}
       </SafeAreaView>
     </>
   );
